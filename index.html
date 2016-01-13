@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>大家来找茬</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<style type="text/css">
+*{margin:0;padding:0;}
+html,body{width:100%;height:100%;overflow:hidden;background: #e6eaed;}
+#game{width:100%;padding:6px 0;text-align:center;}
+#scene,#counter{width:300px;margin-left:auto;margin-right:auto;}
+#counter{height:15px;border:;margin-bottom:5px;padding:6px 0;line-height:15px;background:url(images/clock.png) 0 0 no-repeat;}
+#counter #time-box{height:15px;margin-left:30px;margin-right:30px;border-radius:5px;box-shadow:inset 3px 3px 2px #979797 , inset -1px 0 2px #979797;background:#bcbcba;}
+#counter #time-bar{width:100%;height:100%;border-radius:5px;background: #FD6B1A;}
+#scene{position: relative;zoom:1;}
+#scene .pic{position: relative;zoom:1;margin-bottom:2px;width:300px;height:222px;}
+#scene .pic img{width:100%;vertical-align:top;}
+#scene .pic .diff{position: absolute;z-index:100;}
+#scene .pic .diff.selected{border:2px solid #f00;}
+#scene .pic .pic-layer{position: absolute;left:0;top:0;width:100%;height:100%;}
+#scene #mask{position: absolute;left:0;top:0;z-index:10000;width:100%;height:100%;color:#fff;}
+#scene #mask .des{padding:180px 30px 0;line-height:30px;text-align:center;}
+#now-diff-num{float: right;}
+
+#layer{position: fixed;_position: absolute; left:0; top:0;z-index:1000;width: 100%;height:120%;background:#666;background:rgba(0,0,0,0.5);}
+#loading-box{position: absolute;left:50%;top:100px;width:250px;height:20px;margin-left:-125px;text-align:center;line-height:20px;border-radius:10px;box-shadow:inset 3px 3px 2px #ddd , inset -1px 0 2px #ddd;background:#eee;}
+#loading-box #loading-bar{width:0;height:100%;border-radius:5px;background: #FD6B1A;}
+#loading-box #progress-bar{position: absolute;left:0;top:0;width:100%;height:100%;}
+.user-action{padding-top:3px;}
+.user-action .btn{padding:3px 10px;border-radius:5px;border:0 none;}
+</style>
+
+</head>
+
+<body>
+
+<div id="layer">
+    <div id="loading-box">
+        <div id="loading-bar"></div>
+        <div id="progress-bar"></div>
+    </div>  
+</div>     
+
+<div id="game">
+
+    <div id="counter">
+        <span id="now-diff-num"><span id="diff-find-num">0</span>/4</span>
+        <div id="time-box">
+            <div id="time-bar"></div>
+        </div>
+    </div>
+
+    <div id="scene">
+        <div class="pic" id="top-pic"></div>
+        <div class="pic" id="bottom-pic"></div>
+        <b id="mask"></b>
+    </div>
+
+    <div class="user-action">
+        <button class="btn" id="start-btn">开始游戏</button>
+    </div>
+
+</div>
+   
+    
+</body>
+</html>
+
+<script type="text/javascript" src="js/img-data.js"></script>
+<script type="text/javascript" src="js/f-d.js"></script>
+
+
+
+
