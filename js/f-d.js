@@ -10,7 +10,7 @@
         bottomPic = d.getElementById("bottom-pic"),
         layer = d.getElementById("layer"), 
         mask = d.getElementById("mask"),  
-        tipsWordArr = ["开始游戏吧！" , "玩累了，休息下吧！" , "时间到，游戏结束！每点错一次扣10s，你的得分是" , "恭喜全部通关！你的得分是"],
+        tipsWordArr = ["开始游戏吧！" , "玩累了，休息下吧！" , "时间到，游戏结束！每点错一次扣10s，你的得分是" , "恭喜全部通关！你的得分是" , "开始游戏" , "暂停游戏"],
         imgNumArr = [],
         imgDiffNum = 0,
         imgFindNum = 0, 
@@ -24,8 +24,8 @@
             counter.start(timeBar , true , game.over);
             sceneMask.hide();
         } 
-        if(this.innerHTML == "开始游戏"){
-            this.innerHTML = "暂停游戏";
+        if(this.innerHTML == tipsWordArr[4]){
+            this.innerHTML = tipsWordArr[5];
             if(isPlayAgain){
                 counter.start(timeBar , true , game.over);
             }
@@ -35,7 +35,7 @@
             sceneMask.hide();
         }
         else{
-            this.innerHTML = "开始游戏";
+            this.innerHTML = tipsWordArr[4];
             counter.stop();
             sceneMask.show(tipsWordArr[1]);
         }
@@ -114,7 +114,7 @@
             }   
             counter.stop(); 
             isPlayAgain = true;
-            startBtn.innerHTML = "开始游戏";   
+            startBtn.innerHTML = tipsWordArr[4];   
         },
         init : function(){
             isFirstPlay && sceneMask.show(tipsWordArr[0]);
