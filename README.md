@@ -11,6 +11,6 @@ find-different 是一款类似找茬的游戏，需在规定时间内找出两�
 
 注意：切勿乱点，如果点击的不是不同处，则时间会直接扣除10s。
 
-dont-touch-B演示：[点击查看](http://joy-yi0905.github.io/find-different/)
+find-different演示：[点击查看](http://joy-yi0905.github.io/find-different/)
 
 ![扫描二维码](http://joy-yi0905.github.io/find-different/images/qr.png) 
